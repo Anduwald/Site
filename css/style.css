@@ -1,43 +1,128 @@
-body {
-  padding: 0;
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@font-face {
+  font-family: "Delm";
+  src: local("Delm Regular"), local("Delm-Regular"),
+    url("Delm-Regular.woff2") format("woff2"),
+    url("Delm-Regular.woff") format("woff"),
+    url("Delm-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-  border: 2px solid blue;
-  border-radius: 100%;
-  float: left;
-  margin-right: 25px;
-}
-.profile-block {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.post {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid lightgrey;
-  border-radius: 5px;
-  padding: 10px;
-  max-width: 600px;
-}
-.control {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-.post p {
+html,
+body {
+  width: 100%;
   padding: 0;
   margin: 0;
 }
-.profile-block a {
+/* Navbar styles */
+nav {
+  height: 121px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 600px;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+}
+
+nav > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-logo {
+  width: 219px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.nav-logo > div {
+  font-family: "Delm";
+  font-size: 35px;
+  line-height: 44px;
+
+  color: #0cff42;
+}
+
+.nav-logo > img {
+  padding-left: 7px;
+}
+
+.nav-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.nav-link {
+  padding: 0 25px;
+}
+
+.nav-link > a {
+  font-family: "Montserrat";
+  font-size: 25px;
+  line-height: 30px;
+  flex-wrap: nowrap;
+
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-left: 50px;
+}
+
+.nav-donate-btn {
+  padding: 10px 35px 11px;
+  gap: 10px;
+
+  width: 224px;
+  height: 51px;
+
+  background: #00c82c;
+  border-radius: 15px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #ffffff;
+}
+
+.nav-change-lang {
+  margin-left: 50px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #ffffff;
+}
+
+.nav-user-icon {
+  margin-left: 20px;
+}
+
+#drop-block-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#drop-block-btn > img {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1440) {
 }

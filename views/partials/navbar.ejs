@@ -1,43 +1,59 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/" id=>VUkraine</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">#STOP_WAR</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<nav>
+  <div>
+    <div class="nav-logo">
+      <div>UkrainochkaBobrs</div>
+      <img src="img/logo.svg" alt="" />
+    </div>
+
+    <div class="nav-navbar">
+      <div class="nav-link"><a href="">Головна</a></div>
+      <div class="nav-link"><a href="">Про нас</a></div>
+      <div class="nav-link"><a href="">Цілі</a></div>
+      <div id="drop-block-btn" class="nav-link">
+        <a href="">Область </a>
+        <img src="img/arrow.svg" alt="" />
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link <%- activePage == "home" ? "active" : "" %>" href="/">Profile</a>
-          </li>
-        <% if (typeof currentUser !== "undefined" ) { %>
-          <li class="nav-item">
-            <a class="nav-link <%- activePage == "profile" ? "active" : "" %>" href="/profile">Edit Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link <%- activePage == "people" ? "active" : "" %>" href="/people">People</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link <%- activePage == "logout" ? "active" : "" %>" href="/logout">Logout</a>
-          </li>
-        <% } else { %>
-          <li class="nav-item">
-            <a class="nav-link <%- activePage == "login" ? "active" : "" %>" href="/login">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link <%- activePage == "register" ? "active" : "" %>" href="/register">Register</a>
-          </li>
-        <% } %>
-        </ul>
-        <form class="d-flex mt-3 mt-lg-0" role="search" method="post" action="/search">
-          <input class="form-control me-2" type="search" name="searchLine" id="surnameLine" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+    </div>
+
+    <div class="nav-user">
+      <button class="nav-donate-btn">Підтримати</button>
+      <div class="nav-change-lang">UA</div>
+      <img src="img/user-icon.svg" alt="" class="nav-user-icon" />
     </div>
   </div>
 </nav>
+<div class="drop-block" style="display: none">
+  <div class="drop-block-links">
+    <div>Test text 1</div>
+    <div>Test text 2</div>
+    <div>Test text 3</div>
+    <div>Test text 4</div>
+    <div>Test text 5</div>
+    <div>Test text 6</div>
+    <div>Test text 7</div>
+    <div>Test text 8</div>
+    <div>Test text 9</div>
+  </div>
+  <div class="drop-block-links">
+    <div>Test text 1</div>
+    <div>Test text 2</div>
+    <div>Test text 3</div>
+    <div>Test text 4</div>
+    <div>Test text 5</div>
+    <div>Test text 6</div>
+    <div>Test text 7</div>
+    <div>Test text 8</div>
+    <div>Test text 9</div>
+  </div>
+  <div class="drop-block-links">
+    <div>Test text 1</div>
+    <div>Test text 2</div>
+    <div>Test text 3</div>
+    <div>Test text 4</div>
+    <div>Test text 5</div>
+    <div>Test text 6</div>
+    <div>Test text 7</div>
+    <div>Test text 8</div>
+    <div>Test text 9</div>
+  </div>
+</div>

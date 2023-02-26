@@ -54,7 +54,7 @@ function checkAuth(req, res, next) {
 //End of Function for auth users
 
 // -> Routes for pages in nav
-app.get("/", checkAuth, function (req, res) {
+app.get("/", function (req, res) {
   let sql = "SELECT * FROM post where user_id = ?";
   db.all(sql, [req.session.userId], (err, rows) => {
     if (err) {
