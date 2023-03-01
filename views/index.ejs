@@ -3,8 +3,86 @@
   <%- include("partials/head.ejs") %>
   <body>
     <%- include("partials/navbar.ejs") %>
+    <main>
+      <header style="background-image: url('img/main_slider/photo1.png')">
+        <h1>
+          Відбудуй Україну - залиши <br />
+          слід в історії
+        </h1>
+        <button class="map-btn">Відкрити мапу</button>
+        <div class="indicators">
+          <div class="circle cir-active"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </header>
 
-    <!-- JavaScript -->
-    <script src="/jquery/jquery.min.js"></script>
+      <section>
+        <h1 style="margin: 100px 0 0">Наші цілі</h1>
+
+        <div class="aims">
+          <div class="card">
+            <h1>01</h1>
+            <div class="in-card">
+              <img src="img/aim1.svg" alt="" />
+              <p>Поширення<br />інформації про<br />зруйновані будівлі</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h1>02</h1>
+            <div class="in-card">
+              <img src="img/aim2.svg" alt="" />
+              <p>
+                Залучення<br />міжнародних<br />партнерів до відбудови<br />історичних
+                пам’яток
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h1>03</h1>
+            <div class="in-card">
+              <img src="img/aim3.svg" alt="" />
+              <p>
+                Усі зібрані гроші<br />передати до фондів<br />для реставрації
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="nav-donate-btn">Підтримати</button>
+      </section>
+
+      <section></section>
+    </main>
+
+    <script>
+      // Move Slider
+      let i = 2;
+      setInterval(() => {
+        $("header").animate({
+          opacity: 0,
+        });
+        $(".indicators").children(".cir-active").removeClass("cir-active");
+
+        $("header").css(
+          "background-image",
+          "url('img/main_slider/photo" + i + ".png')"
+        );
+        $(".indicators")
+          .children()
+          .eq(i - 1)
+          .addClass("cir-active");
+        $("header").animate({
+          opacity: 1,
+        });
+
+        i++;
+        if (i == 7) i = 1;
+      }, 3000);
+    </script>
   </body>
 </html>

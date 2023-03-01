@@ -6,12 +6,48 @@
     </div>
 
     <div class="nav-navbar">
-      <div class="nav-link"><a href="">Головна</a></div>
-      <div class="nav-link"><a href="">Про нас</a></div>
-      <div class="nav-link"><a href="">Цілі</a></div>
+      <div class="nav-link"><a href="#main">Головна</a></div>
+      <div class="nav-link"><a href="#about">Про нас</a></div>
+      <div class="nav-link"><a href="#aims">Цілі</a></div>
       <div id="drop-block-btn" class="nav-link">
-        <a href="">Область </a>
-        <img src="img/arrow.svg" alt="" />
+        Область
+        <img id="drop-img" src="img/arrow.svg" alt="" />
+
+        <div class="drop-block">
+          <div>
+            <div class="drop-block-links">
+              <a href="">АР Крим</a>
+              <a href="">Вінницька</a>
+              <a href="">Волинська</a>
+              <a href="">Дніпропетровська</a>
+              <a href="">Донецька</a>
+              <a href="">Житомирська</a>
+              <a href="">Закарпатська</a>
+              <a href="">Запорізька</a>
+              <a href="">Івано-Франківська</a>
+            </div>
+            <div class="drop-block-links">
+              <a href="">Кіровоградська</a>
+              <a href="">Київська</a>
+              <a href="">Луганська</a>
+              <a href="">Львівська</a>
+              <a href="">Миколаївська</a>
+              <a href="">Одеська</a>
+              <a href="">Полтавська</a>
+              <a href="">Рівненська</a>
+            </div>
+            <div class="drop-block-links">
+              <a href="">Сумська</a>
+              <a href="">Тернопільська</a>
+              <a href="">Харківська</a>
+              <a href="">Херсонська</a>
+              <a href="">Хмельницька</a>
+              <a href="">Черкаська</a>
+              <a href="">Чернівецька</a>
+              <a href="">Чернігівська</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -22,38 +58,28 @@
     </div>
   </div>
 </nav>
-<div class="drop-block" style="display: none">
-  <div class="drop-block-links">
-    <div>Test text 1</div>
-    <div>Test text 2</div>
-    <div>Test text 3</div>
-    <div>Test text 4</div>
-    <div>Test text 5</div>
-    <div>Test text 6</div>
-    <div>Test text 7</div>
-    <div>Test text 8</div>
-    <div>Test text 9</div>
-  </div>
-  <div class="drop-block-links">
-    <div>Test text 1</div>
-    <div>Test text 2</div>
-    <div>Test text 3</div>
-    <div>Test text 4</div>
-    <div>Test text 5</div>
-    <div>Test text 6</div>
-    <div>Test text 7</div>
-    <div>Test text 8</div>
-    <div>Test text 9</div>
-  </div>
-  <div class="drop-block-links">
-    <div>Test text 1</div>
-    <div>Test text 2</div>
-    <div>Test text 3</div>
-    <div>Test text 4</div>
-    <div>Test text 5</div>
-    <div>Test text 6</div>
-    <div>Test text 7</div>
-    <div>Test text 8</div>
-    <div>Test text 9</div>
-  </div>
-</div>
+
+<script>
+  // Hover for navbar
+  $(document).ready(function () {
+    $("#drop-block-btn").hover(
+      () => {
+        $(".drop-block").slideDown("medium");
+        $("#drop-img").css({
+          transition: "all 0.2s linear",
+          transform: "rotate(180deg)",
+          filter: "invert(0.5) sepia(10) saturate(20) hue-rotate(80deg)",
+        });
+      },
+      () => {
+        $(".drop-block").slideUp("fast");
+        $("#drop-img").css({
+          transition: "all 0.2s linear",
+          transform: "rotate(0deg)",
+          filter: "invert(0)",
+        });
+      }
+    );
+  });
+  // ---
+</script>
