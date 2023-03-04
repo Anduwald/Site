@@ -5,6 +5,10 @@
     <%- include("partials/navbar.ejs") %>
     <main>
       <header style="background-image: url('img/main_slider/photo1.png')">
+        <div class="img-btn-block">
+          <div class="img-btn after-btn">Після 01.03.2022</div>
+        </div>
+
         <h1>
           Відбудуй Україну - залиши <br />
           слід в історії
@@ -56,29 +60,74 @@
         <button class="nav-donate-btn">Підтримати</button>
       </section>
 
-      <section></section>
+      <section>
+        <h1 style="margin: 100px 0 0">Про нас</h1>
+        <p>
+          Ми студентки Національного аерокосмічного університету ім. М. Є.
+          Жуковського «ХАІ». А ще ми молоді українки, які на власні очі бачили
+          жахіття, які відбувалися і відбуваються на території України. Хтось із
+          нас житель сонячного Херсону, а хтось родом із Сумщини.
+        </p>
+        <div class="more-detail"><div>Детальніше</div></div>
+        <div class="team-block">
+          <div class="person">
+            <img src="img/person_img/Kate.png" alt="" />
+            <div>Підручна Катерина</div>
+          </div>
+          <div class="person">
+            <img src="img/person_img/Lyda.png" alt="" />
+            <div>Богославська Людмила</div>
+          </div>
+          <div class="person">
+            <img src="img/person_img/Tanya.png" alt="" />
+            <div>Дивульська Тетяна</div>
+          </div>
+          <div class="person">
+            <img src="img/person_img/Nastya.png" alt="" />
+            <div>Нікітенко Анастасія</div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <%- include("partials/footer.ejs") %>
 
     <script>
       // Move Slider
+      let dataArr = [
+        "Після 01.03.2022",
+        "До 01.03.2022",
+        "Після 06.05.2022",
+        "До 06.05.2022",
+        "Після 18.04.2022",
+        "До 18.04.2022",
+      ];
+
       let i = 2;
       setInterval(() => {
         $("header").animate({
           opacity: 0,
         });
-        $(".indicators").children(".cir-active").removeClass("cir-active");
 
-        $("header").css(
-          "background-image",
-          "url('img/main_slider/photo" + i + ".png')"
-        );
         $(".indicators")
+          .children(".cir-active")
+          .removeClass("cir-active")
+          .parent()
           .children()
           .eq(i - 1)
           .addClass("cir-active");
-        $("header").animate({
-          opacity: 1,
-        });
+
+        let orderIndic = !(i % 2);
+        $(".img-btn")
+          .removeClass(orderIndic ? "after-btn" : "before-btn")
+          .text(dataArr[i - 1])
+          .addClass(orderIndic ? "before-btn" : "after-btn");
+
+        $("header")
+          .css("background-image", "url('img/main_slider/photo" + i + ".png')")
+          .animate({
+            opacity: 1,
+          });
 
         i++;
         if (i == 7) i = 1;
