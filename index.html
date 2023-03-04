@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>UkrainochkaBobrs</title>
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <div class="nav-logo">
+          <div>UkrainochkaBobrs</div>
+          <img src="img/logo.svg" alt="" />
+        </div>
+
+        <div class="nav-navbar">
+          <div class="nav-link"><a href="#main">Головна</a></div>
+          <div class="nav-link"><a href="#about">Про нас</a></div>
+          <div class="nav-link"><a href="#aims">Цілі</a></div>
+          <div id="drop-block-btn" class="nav-link">
+            Область
+            <img id="drop-img" src="img/arrow.svg" alt="" />
+
+            <div class="drop-block">
+              <div>
+                <div class="drop-block-links">
+                  <a href="">АР Крим</a>
+                  <a href="">Вінницька</a>
+                  <a href="">Волинська</a>
+                  <a href="">Дніпропетровська</a>
+                  <a href="">Донецька</a>
+                  <a href="">Житомирська</a>
+                  <a href="">Закарпатська</a>
+                  <a href="">Запорізька</a>
+                  <a href="">Івано-Франківська</a>
+                </div>
+                <div class="drop-block-links">
+                  <a href="">Кіровоградська</a>
+                  <a href="">Київська</a>
+                  <a href="">Луганська</a>
+                  <a href="">Львівська</a>
+                  <a href="">Миколаївська</a>
+                  <a href="">Одеська</a>
+                  <a href="">Полтавська</a>
+                  <a href="">Рівненська</a>
+                </div>
+                <div class="drop-block-links">
+                  <a href="">Сумська</a>
+                  <a href="">Тернопільська</a>
+                  <a href="">Харківська</a>
+                  <a href="">Херсонська</a>
+                  <a href="">Хмельницька</a>
+                  <a href="">Черкаська</a>
+                  <a href="">Чернівецька</a>
+                  <a href="">Чернігівська</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-user">
+          <button class="nav-donate-btn">Підтримати</button>
+          <div class="nav-change-lang">UA</div>
+          <img src="img/user-icon.svg" alt="" class="nav-user-icon" />
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      // Hover for navbar
+      $(document).ready(function () {
+        $("#drop-block-btn").hover(
+          () => {
+            $(".drop-block").slideDown("medium");
+            $("#drop-img").css({
+              transition: "all 0.2s linear",
+              transform: "rotate(180deg)",
+              filter: "invert(0.5) sepia(10) saturate(20) hue-rotate(80deg)",
+            });
+          },
+          () => {
+            $(".drop-block").slideUp("fast");
+            $("#drop-img").css({
+              transition: "all 0.2s linear",
+              transform: "rotate(0deg)",
+              filter: "invert(0)",
+            });
+          }
+        );
+      });
+      // ---
+    </script>
+
+    <main>
+      <header style="background-image: url('img/main_slider/photo1.png')">
+        <div class="img-btn-block">
+          <div class="img-btn after-btn">Після 01.03.2022</div>
+        </div>
+
+        <h1>
+          Відбудуй Україну - залиши <br />
+          слід в історії
+        </h1>
+        <button class="map-btn">Відкрити мапу</button>
+        <div class="indicators">
+          <div class="circle cir-active"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </header>
+
+      <section>
+        <h1 style="margin: 100px 0 0">Наші цілі</h1>
+
+        <div class="aims">
+          <div class="card">
+            <h1>01</h1>
+            <div class="in-card">
+              <img src="img/aim1.svg" alt="" />
+              <p>Поширення<br />інформації про<br />зруйновані будівлі</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h1>02</h1>
+            <div class="in-card">
+              <img src="img/aim2.svg" alt="" />
+              <p>
+                Залучення<br />міжнародних<br />партнерів до відбудови<br />історичних
+                пам’яток
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h1>03</h1>
+            <div class="in-card">
+              <img src="img/aim3.svg" alt="" />
+              <p>
+                Усі зібрані гроші<br />передати до фондів<br />для реставрації
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="nav-donate-btn">Підтримати</button>
+      </section>
+
+      <section>
+        <h1 style="margin: 100px 0 0">Про нас</h1>
+        <p>
+          Ми студентки Національного аерокосмічного університету ім. М. Є.
+          Жуковського «ХАІ». А ще ми молоді українки, які на власні очі бачили
+          жахіття, які відбувалися і відбуваються на території України. Хтось із
+          нас житель сонячного Херсону, а хтось родом із Сумщини.
+        </p>
+        <div class="more-detail"><div>Детальніше</div></div>
+        <div class="team-block">
+          <div class="person">
+            <img src="img/person_img/Kate.png" alt="" />
+            <div>Підручна Катерина</div>
+          </div>
+          <div class="person">
+            <img src="img/person_img/Lyda.png" alt="" />
+            <div>Богославська Людмила</div>
+          </div>
+          <div class="person">
+            <img src="img/person_img/Tanya.png" alt="" />
+            <div>Дивульська Тетяна</div>
+          </div>
+          <div class="person">
+            <img src="img/person_img/Nastya.png" alt="" />
+            <div>Нікітенко Анастасія</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <div class="footer-block">
+          <div class="nav-logo">
+            <div>UkrainochkaBobrs</div>
+            <img src="img/logo.svg" alt="" />
+          </div>
+          <div class="copyright">© 2023 Усі права захищені</div>
+        </div>
+
+        <div class="footer-block">
+          <div class="nav-navbar">
+            <div class="nav-link"><a href="#main">Головна</a></div>
+            <div class="nav-link"><a href="#about">Про нас</a></div>
+            <div class="nav-link"><a href="#aims">Цілі</a></div>
+            <div class="nav-link"><a href="#">Область</a></div>
+          </div>
+        </div>
+
+        <div class="footer-block">
+          <div class="mail">ukrainochkabobrs@gmail.com</div>
+          <div class="politic">Політика конфіденційності</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Move Slider
+      let dataArr = [
+        "Після 01.03.2022",
+        "До 01.03.2022",
+        "Після 06.05.2022",
+        "До 06.05.2022",
+        "Після 18.04.2022",
+        "До 18.04.2022",
+      ];
+
+      let i = 2;
+      setInterval(() => {
+        $("header").animate({
+          opacity: 0,
+        });
+
+        $(".indicators")
+          .children(".cir-active")
+          .removeClass("cir-active")
+          .parent()
+          .children()
+          .eq(i - 1)
+          .addClass("cir-active");
+
+        let orderIndic = !(i % 2);
+        $(".img-btn")
+          .removeClass(orderIndic ? "after-btn" : "before-btn")
+          .text(dataArr[i - 1])
+          .addClass(orderIndic ? "before-btn" : "after-btn");
+
+        $("header")
+          .css("background-image", "url('img/main_slider/photo" + i + ".png')")
+          .animate({
+            opacity: 1,
+          });
+
+        i++;
+        if (i == 7) i = 1;
+      }, 3000);
+    </script>
+  </body>
+</html>
